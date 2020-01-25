@@ -1,4 +1,4 @@
 library(testthat)
-library(ggamma)
+library(ollggamma)
 
-test_check("ggamma")
+test_check("ollggamma")
