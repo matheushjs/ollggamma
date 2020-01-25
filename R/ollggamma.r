@@ -142,7 +142,7 @@ qollggamma = function(p, a, b, k, lambda, lower.tail = TRUE, log.p = FALSE){
 	if(log.p) p = exp(p);
 	if(!lower.tail) p = 1 - p;
 	quantile = 1 / ((1/p - 1)**(1/lambda) + 1)
-	quantile = qgamma(p, shape=k, rate=1); # This is qggamma
+	quantile = qgamma(quantile, shape=k, rate=1); # This is qggamma
 	quantile = a * quantile**(1/b);        # This is also qggamma
 	return(quantile);
 }
