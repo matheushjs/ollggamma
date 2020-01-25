@@ -100,7 +100,7 @@
 #'
 #' @examples
 #'
-#' x = seq(0.001, 5, length=1000);  0.5, 1.2, 5, 0.3
+#' x = seq(0.001, 5, length=1000);
 #' plot(x, dollggamma(x, 0.5, 1.2, 5, 0.3), col=2, type="l", lwd=4, ylim=c(0, 1));
 #' lines(x, pollggamma(x, 0.5, 1.2, 5, 0.3), col=4, type="l", lwd=4, ylim=c(0, 1));
 #' legend("right", c("PDF", "CDF"), col=c(2, 4), lwd=4);
