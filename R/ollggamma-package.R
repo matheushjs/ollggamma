@@ -1,8 +1,9 @@
 
-#' Generalized Gamma Probability Distribution
+#' Odd Log-Logistic Generalized Gamma Probability Distribution
 #'
 #' Density, distribution function, quantile function and random
-#' generation for the Generalized Gamma lifetime distributions.
+#' generation for the Odd Log-Logistic Generalized Gamma probability
+#' distribution.
 #' 
 #' @details
 #' 
@@ -17,9 +18,6 @@
 #' (e.g. for non-integers in discrete distributions, or for
 #' negative values in functions with non-negative support).
 #'
-#' C++ was not used, as the R code proved itself most efficient.
-#' See the package website page for more details.
-#' 
 #' @docType package
 #' @name ollggamma
 #'
