@@ -19,7 +19,7 @@
 #' negative values in functions with non-negative support).
 #'
 #' @docType package
-#' @name ollggamma
+#' @name OLL-G.Gamma
 #'
 #' @importFrom stats dgamma pgamma qgamma rgamma
 #' @importFrom stats runif
