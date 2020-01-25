@@ -72,21 +72,21 @@ test_that("random number generation", {
 	set.seed(72);
 
 	a = 1; b = 1; k = 1; lambda = 1;
-	r = rollggamma(100000, a, b, k);
+	r = rollggamma(100000, a, b, k, lambda);
 	e = ecdf(r);
 	x = seq(0.001, 10, length=10000);
 	maxError = max(abs(e(x) - pollggamma(x, a, b, k, lambda)));
 	expect_lte(maxError, 1e-2);
 
 	a = 0.3; b = 1.5; k = 1.5; lambda = 1.2;
-	r = rollggamma(100000, a, b, k);
+	r = rollggamma(100000, a, b, k, lambda);
 	e = ecdf(r);
 	x = seq(0.001, 10, length=10000);
 	maxError = max(abs(e(x) - pollggamma(x, a, b, k, lambda)));
 	expect_lte(maxError, 1e-2);
 
 	a = 1.5; b = 5; k = 0.3; lambda = 0.5;
-	r = rollggamma(100000, a, b, k);
+	r = rollggamma(100000, a, b, k, lambda);
 	e = ecdf(r);
 	x = seq(0.001, 10, length=10000);
 	maxError = max(abs(e(x) - pollggamma(x, a, b, k, lambda)));
