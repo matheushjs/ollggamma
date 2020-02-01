@@ -120,6 +120,7 @@ dollggamma = function(x, a, b, k, lambda, log=F){
 	lpdf = log(b) - lgamma(k) + (b*k - 1)*log(x) - (b*k)*log(a) - (x/a)**b; # This is log(dggamma)
 	result = log(lambda) + lpdf + (lambda - 1)*(log(cdf) + log(1 - cdf)) - 2*log(cdf**lambda + (1 - cdf)**lambda);
 	result[cdf == 1] = log(0); # We analyzed the formulas and concluded this is right.
+	result[x < 0] = log(0);
 	if(!log) result = exp(result);
 	return(result);
 }
@@ -130,6 +131,7 @@ dollggamma = function(x, a, b, k, lambda, log=F){
 pollggamma = function(q, a, b, k, lambda, lower.tail = TRUE, log.p = FALSE){
 	cdf = pgamma( (q / a)**b, shape=k, rate=1); # This is pggamma
 	cdf = 1 / (1 + (1/cdf - 1)**lambda)     # now apply the odd-logistic
+	cdf[q <= 0] = 0;
 	if(!lower.tail) cdf = 1 - cdf;
 	if(log.p) cdf = log(cdf);
 	return(cdf);

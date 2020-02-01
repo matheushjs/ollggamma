@@ -1,6 +1,6 @@
 Package: ollggamma
 Title: Odd Log-Logistic Generalized Gamma Probability Distribution
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person(given = "Matheus H. J.",
            family = "Saldanha",
@@ -17,7 +17,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://mjsaldanha.com/posts/ollggamma
 BugReports: https://github.com/matheushjs/ollggamma
-RoxygenNote: 7.0.1
+RoxygenNote: 7.0.2
 Depends: R (>= 3.1.0)
 Suggests:
     testthat, ggamma
